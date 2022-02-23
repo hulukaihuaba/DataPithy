@@ -105,8 +105,8 @@ namespace Ivony.Data.SqlClient
         TryExecuteTracing( tracing, t => t.OnExecuting( command ) );
 
 
-        if ( Configuration.QueryExecutingTimeout.HasValue )
-          command.CommandTimeout = (int) Configuration.QueryExecutingTimeout.Value.TotalSeconds;
+        //if ( Configuration.QueryExecutingTimeout.HasValue )
+        //  command.CommandTimeout = (int) Configuration.QueryExecutingTimeout.Value.TotalSeconds;
 
 
         var reader = command.ExecuteReader();
