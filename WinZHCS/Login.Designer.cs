@@ -98,7 +98,6 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Enabled = false;
             this.btnRegister.Location = new System.Drawing.Point(208, 198);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(94, 29);

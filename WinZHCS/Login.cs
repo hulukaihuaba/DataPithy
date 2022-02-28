@@ -25,12 +25,6 @@ namespace WinZHCS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            btnLogin.Enabled = false;
-            btnRegister.Enabled = true;
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
             string serverValue = this.textBoxServer.Text;
             string userName = this.textBoxUser.Text;
             string passWord = this.textBoxPwd.Text;
@@ -47,6 +41,13 @@ namespace WinZHCS
                 [Index] INT NOT NULL, 
                 CONSTRAINT [PK_Test1] PRIMARY KEY ([ID]) 
             )").ExecuteNonQuery();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Register registerForm = new Register();
+            this.Hide();
+            registerForm.ShowDialog();
         }
 
         private void initializeForm(ConfigModel config)
